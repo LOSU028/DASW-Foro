@@ -5,6 +5,8 @@ const router = express.Router();
 const User = require('../../controllers/user');
 const ProposalsSchema = require('../models/proposals-schema');
 const userSchema = require('../models/users-schema');
+const commentsSchema = require('../models/comments-schema');
+
 
 //create user
 //router.post
@@ -19,6 +21,24 @@ router.route('/proposals/:id')
             .then(res.send("Proposal eliminated succesfully!").status(200))
             .catch((error) => res.json({message: error}).send(400));
     });
+
+router.route('/proposals/:id/comments/:userid')
+    .delete((req,res) => {
+        const { id } = req.params;
+        const { userid } = req.params;
+        commentsSchema
+            .deleteOne({ _proposalid : id, _userid : userid})
+            .then((result) => {
+                console.log(result);
+                if(result.deletedCount > 0){
+                    res.send("Comment eliminated succesfully!").status(200);
+                }else{
+                    res.status(404).send("Comment not found");
+                }
+                
+            })  
+            .catch((error) => res.json({message: error}).send(400));
+    })
 
 router.route('/proposals/:id/likes')
     .put((req,res) => {
