@@ -5,7 +5,7 @@ const router = express.Router();
 const baseRoute = __dirname.slice(0, -10);
 
 router.route('/').get((req,res) => {
-    res.sendFile(baseRoute + "/views/registro.html")
+    res.sendFile(baseRoute + "/public/registro.html")
 })
 
 module.exports = router;

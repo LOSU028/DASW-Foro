@@ -15,7 +15,7 @@ router.use('/registro', registroRouter)
 
 
 router.get('/', (req, res) => {
-    res.sendFile(baseRoute + "/views/login_page.html")
+    res.sendFile(baseRoute + "/public/login_page.html")
 })
 function validateAdmin(req, res, next){
     let adminToken = req.get('x-auth');
