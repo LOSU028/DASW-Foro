@@ -61,42 +61,18 @@
             </li>
         </div>
     </nav>
-    <div class="container">
-        <div class="row">
-            <!-- Card -->
-            <div class="col-md-10">
-                <div class="card user-cards">
-                    <div class="row no-gutters">
-                        <div class="col-md-2">
-                            <img src="user-placeholder.jpg" class="card-img" alt="User Icon Placeholder">
-                        </div>
-                        <div class="col-md-10">
-                            <div class="card-body">
-                                <div class="row">
-                                    <div class="col-md-9">
-                                        <h5 class="card-title">User defined Title</h5>
-                                        <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos, id! Velit aut ex, enim neque facere qui ad dolor ducimus error dolorem dignissimos consectetur exercitationem, hic reiciendis veniam minus ratione? Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore odit officia ducimus voluptate impedit laudantium repudiandae expedita autem aut, non animi inventore sit natus? A dolore nam perspiciatis recusandae consectetur.</p>
-                                    </div>
-                                    <div class="col-md-3">
-                                        <!-- Buttons inside the card -->
-                                        <div class="d-flex flex-column align-items-end">
-                                            <button class="btn btn-success mb-2"><i class="fas fa-thumbs-up"></i></button>
-                                            <button class="btn btn-danger"><i class="fas fa-thumbs-down"></i></button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+
+    <div class="container mb-5" id = "proposalList">
+        <div id="proposalCards"></div>
     </div>
 
     <a href="#" class="circular-button">
         <i class="fas fa-plus"></i>
     </a>
-
+    <!--Scripts-->
+    <script src="/ajax_handler.js" type="text/javascript"></script>
+    <script src="/proposal-utils.js" type="text/javascript"></script>
+    
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
