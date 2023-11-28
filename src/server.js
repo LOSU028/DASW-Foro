@@ -9,7 +9,7 @@ const port = 3000;
 //mongoDB connection 
 mongoose
     .connect("mongodb+srv://LOSU:POaFGBlTR4qwjpoh@dasw.ujvlizg.mongodb.net/?retryWrites=true&w=majority")
-    .then(() => console.log("Conected to MongoDB Atlas"))
+    .then(() => console.log("Conected to MongoDB"))
     .catch((error) => console.error(error));
 
 //routes
