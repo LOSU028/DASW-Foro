@@ -3,9 +3,92 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
     <title>Configuracion de Usuarios</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: rgb(65, 95, 248);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between; 
+            align-items: center; 
+            background-color: rgb(4, 26, 135);
+            padding: 10px 20px; 
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 10px; 
+        }
+
+        .container {
+            position: relative; 
+        }
+
+        input {
+            outline: none;
+            box-sizing: border-box;
+            height: 40px; 
+            width: 0;
+            padding: 0 20px;
+            color: black;
+            border-radius: 20px; 
+            font-size: 16px; 
+            border: 1px solid rgb(4, 26, 135);
+            transition: all .7s ease;
+        }
+
+        ::placeholder {
+            color: grey;
+        }
+
+        .btn {
+            position: absolute;
+            right: 0;
+            top: 0;
+            width: 40px; 
+            height: 40px;
+            background: rgb(4, 26, 135);
+            line-height: 40px;
+            border-radius: 50%;
+            text-align: center;
+            cursor: pointer;
+            transition: .5s;
+        }
+
+        .btn i {
+            font-size: 16px; 
+            color: white;
+            line-height: 40px;
+            transition: all .7s ease;
+        }
+
+        .container:hover input {
+            width: 200px; 
+        }
+
+        .container:hover .btn i {
+            transform: rotate(-360deg);
+        }
+    </style>
 </head>
+
 <body>
-    
+
+<nav>
+    <a class="fa fa-home" href="#"></a>
+    <div class="container">
+        <input type="text" placeholder="Buscar">
+        <div class="btn">
+            <i class="fa fa-search"></i>
+        </div>
+    </div>
+</nav>
+
 </body>
 </html>
