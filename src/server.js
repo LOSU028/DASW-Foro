@@ -16,8 +16,6 @@ mongoose
     .then(() => console.log("Conected to MongoDB"))
     .catch((error) => console.error(error));
 
-//routes
-//app.use(express.json());
 app.use(cookieParser());
 app.use(express.json());
 app.use(cors())
