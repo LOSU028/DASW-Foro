@@ -88,9 +88,9 @@ router.route('/users')
 router.route('/users/:id')
     .put((req,res) => {
         const { id } = req.params;
-        const { email, username, age} = req.body;
+        const { email, username, age, password} = req.body;
         userSchema
-            .updateOne({_id: id}, {$set: {_email : email, _username: username, _age : age}})
+            .updateOne({_id: id}, {$set: {_email : email, _username: username, _age : age, _password: password}})
             .then((data) => res.send("User updated succefully").status(200))
             .catch((error) => res.json({message: error}).send(400));
     })

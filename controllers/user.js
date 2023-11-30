@@ -15,11 +15,12 @@ class UserException{
 }
 
 class User{
-    constructor(email,username,age){
+    constructor(email,username,age, password){
         this._id = generateUUID();
         this.email = email;
         this.username = username;
         this.age = age;
+        this.password = password;
     }
 
     //setters
@@ -48,6 +49,13 @@ class User{
         this._age = value;
     }
 
+    set password(value){
+        if(typeof value !== 'string' || value === ''){
+            throw new UserException("Password cannot be empty or not a string")
+        }
+        this._password = value;
+    }
+
     //getters
     get id(){
         return this._id
@@ -63,6 +71,10 @@ class User{
 
     get age(){
         return this._age
+    }
+
+    get password(){
+        return this._password
     }
 }
 
