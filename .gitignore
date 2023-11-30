@@ -3,3 +3,4 @@ build/
 npm-debug.log
 .env
 test.http
+package-lock.json
