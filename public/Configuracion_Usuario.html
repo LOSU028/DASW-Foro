@@ -35,11 +35,175 @@
             });
         });
     </script>
+    <style>
+        body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: rgb(65, 95, 248);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(4, 26, 135); /* Cambié el color del navbar */
+    padding: 10px 20px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    font-size: 20px;
+}
+
+.container {
+    position: relative;
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+}
+
+input {
+    outline: none;
+    box-sizing: border-box;
+    height: 40px;
+    width: 0;
+    padding: 0 20px;
+    color: #2c3e50; 
+    border-radius: 20px;
+    font-size: 16px;
+    border: 1px solid #2c3e50; 
+    transition: all .7s ease;
+}
+
+::placeholder {
+    color: #7f8c8d; 
+}
+
+.btn {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+    background: rgb(4, 26, 135); 
+    line-height: 40px;
+    border-radius: 50%;
+    text-align: center;
+    cursor: pointer;
+    transition: .5s;
+}
+
+.btn i {
+    font-size: 16px;
+    color: white;
+    line-height: 40px;
+    transition: all .7s ease;
+}
+
+.container:hover input {
+    width: 200px;
+}
+
+.container:hover .btn i {
+    transform: rotate(-360deg);
+}
+
+
+form {
+    width: 100%;
+    align-items: center;
+    padding: 10px;
+    background-color: #ffffff; 
+    border-radius: 8px;
+    margin-top: 20px;
+    margin:20px;
+}
+
+form input {
+    width: calc(100% - 22px);
+    margin-bottom: 10px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+h2, h3 {
+    color: #2c3e50;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #3498db; 
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease; 
+}
+
+button:hover {
+    background-color: #2980b9; 
+}
+
+aside {
+    margin-top: 5%;
+    margin-left: 3%;
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    font-size: 24px;
+}
+
+.foto f {
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
+    font-size: 100px;
+    color: black; 
+}
+
+article {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 5%;
+    width: 60%;
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    font-size: 24px;
+}
+    </style>
 </head>
 
 <body>
     <nav>
-        <a class="fa fa-home" href="#"></a>
+        <a class="fa fa-home" href="/main"></a>
         <div class="container">
             <input type="text" placeholder="Buscar">
             <div class="btn">
