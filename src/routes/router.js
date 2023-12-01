@@ -10,6 +10,8 @@ const adminRouter = require('./admin');
 const jwtauth = require('../middleware/jwtauth')
 const mainRouter = require('./main');
 const registroRouter = require('./registro')
+const configUsuario = require('./configUsuario')
+
 const baseRoute = __dirname.slice(0, -10);
 
 const urlencodedParser = bodyParser.urlencoded({ extended: false })
@@ -18,7 +20,7 @@ router.use('/proposals',propolsalsRouter);
 router.use('/admin', jwtauth,adminRouter);
 router.use('/main', mainRouter)
 router.use('/registro', registroRouter)
-
+router.use('/configUsuario', configUsuario)
 
 router.get('/', (req, res) => {
     res.sendFile(baseRoute + "/public/login_page.html")
