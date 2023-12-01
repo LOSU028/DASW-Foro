@@ -16,9 +16,10 @@ class ProposalException{
 }
 
 class Proposal{
-    constructor(userid,title, content){
+    constructor(userid, username, title, content){
         this._id = generateUUID();
         this.userid = userid;
+        this.username = username;
         this.title = title;
         this.content = content;
         this._likes = 0;
@@ -36,6 +37,13 @@ class Proposal{
             throw new ProposalException("User id cannot be empty or not a string");
         }
         this._userid = value;
+    }
+
+    set username(value){
+        if(typeof value !== 'string' || value === ''){
+            throw new ProposalException("Username cannot be empty or not a string");
+        }
+        this._username = value;
     }
 
     set title(value){
@@ -76,6 +84,10 @@ class Proposal{
 
     get userid(){
         return this._userid;
+    }
+
+    get username(){
+        return this._username;
     }
 
     get title(){

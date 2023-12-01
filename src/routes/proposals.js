@@ -14,7 +14,7 @@ router.route('/')
             res.send("Body is empty");
         }
         
-        let proposal = new Proposal(req.body.userid, req.body.title, req.body.content);
+        let proposal = new Proposal(req.body.userid, req.body.username, req.body.title, req.body.content);
         const prop = proposalsSchema(proposal);
         //console.log(req.body);
         prop
@@ -77,7 +77,8 @@ router.route('/:id/dislikes')
 
 router.route('/:id/comments')
         .post((req, res) => {
-            let comment = new Comment(req.body.userid, req.body.username, req.body.proposalid, req.body.content);
+            const { id } =  req.params;
+            let comment = new Comment(req.body.userid, req.body.username, id, req.body.content);
             const comm = CommentSchema(comment);
             comm 
                 .save()

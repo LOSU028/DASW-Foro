@@ -11,6 +11,10 @@ const ProposalSchema =  mongoose.Schema({
         type: String,
         required: true
     },
+    _username: {
+        type: String,
+        required: true
+    },
     _title: {
         type: String,
         required: true

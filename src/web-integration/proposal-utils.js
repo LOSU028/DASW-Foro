@@ -11,7 +11,7 @@ function proposalToHTML(proposal){
         <div class="card user-cards">
             <div class="row no-gutters">
                 <div class="col-md-2">
-                    <h5 class="card-title">${proposal._userid}</h5>
+                    <h5 class="card-title">${proposal._username}</h5>
                 </div>
                 <div class="col-md-10">
                     <div class="card-body">
