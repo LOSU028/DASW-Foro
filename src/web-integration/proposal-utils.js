@@ -1,7 +1,7 @@
 "use strict";
 
 let proposalContainer =  document.getElementById('proposalList');
-const proposalsURL = 'http://localhost:3000/proposals'
+const proposalsURL = 'https://daws-proyecto.onrender.com/proposals'
 
 function proposalToHTML(proposal){
     return `
